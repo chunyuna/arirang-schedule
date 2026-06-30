@@ -12,15 +12,8 @@ color:#333;
 
 /* Banner */
 .banner{
-height:280px;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url("images/banner-tour.jpg");
-background-size:cover;
 display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
+width: 100%;
 }
 
 .banner h1{

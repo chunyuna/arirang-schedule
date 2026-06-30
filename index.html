@@ -4,94 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Concert Schedule</title>
+<title>World Concert Tour</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER BANNER -->
 <header class="banner">
-  <div class="banner-content">
-    <h1>🎤 World Concert Tour</h1>
-    <p>Official Schedule & Event Information</p>
-  </div>
+    <div>
+        <h1>🎤 World Concert Tour</h1>
+        <p>Official Schedule • Local Time Auto Conversion</p>
+    </div>
 </header>
 
-<!-- MAIN CONTENT -->
 <div class="container">
 
 <!-- INTRO -->
 <section class="intro">
-  <h2>About This Tour</h2>
-  <p>
-    Welcome to the official concert schedule page. Here you can view all upcoming tour dates,
-    venues, and show timings. The live clock automatically adjusts to your local time zone
-    so you always see accurate timing wherever you are in the world.
-  </p>
+    <h2>About the Tour</h2>
+    <p>
+        This page shows official concert times (venue time) and automatically converts them into your local time.
+        You can also add events directly to your phone calendar.
+    </p>
 </section>
 
-<!-- LIVE TIME -->
+<!-- LIVE CLOCK -->
 <section class="time-card">
-  <h2>Your Local Date & Time</h2>
-  <div id="clock"></div>
-  <div id="timezone"></div>
+    <h2>Your Local Time</h2>
+    <div id="clock"></div>
+    <div id="timezone"></div>
 </section>
 
 <!-- TABLE -->
 <table>
+
 <thead>
 <tr>
-  <th>Date</th>
-  <th>City</th>
-  <th>Venue</th>
-  <th>Door Open</th>
-  <th>Concert Start</th>
+    <th>Date</th>
+    <th>City</th>
+    <th>Venue</th>
+    <th>Event Time</th>
+    <th>Your Local Time</th>
+    <th>Action</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-  <td>10 July 2026</td>
-  <td>Seoul</td>
-  <td>Olympic Stadium</td>
-  <td>5:00 PM</td>
-  <td>7:00 PM</td>
+    <td>2 Aug 2026</td>
+    <td>Kuala Lumpur</td>
+    <td>Bukit Jalil Stadium</td>
+    <td>7:00 PM (MYT)</td>
+    <td id="local1"></td>
+    <td>
+        <button onclick="addToCalendar(
+            'KL Concert',
+            'Bukit Jalil Stadium',
+            '2026-08-02T19:00:00',
+            '2026-08-02T22:00:00'
+        )">
+        Add to Calendar
+        </button>
+    </td>
 </tr>
 
 <tr>
-  <td>17 July 2026</td>
-  <td>Tokyo</td>
-  <td>Tokyo Dome</td>
-  <td>5:00 PM</td>
-  <td>7:00 PM</td>
+    <td>9 Aug 2026</td>
+    <td>Singapore</td>
+    <td>National Stadium</td>
+    <td>7:30 PM (SGT)</td>
+    <td id="local2"></td>
+    <td>
+        <button onclick="addToCalendar(
+            'Singapore Concert',
+            'National Stadium',
+            '2026-08-09T19:30:00',
+            '2026-08-09T22:30:00'
+        )">
+        Add to Calendar
+        </button>
+    </td>
 </tr>
 
 <tr>
-  <td>2 August 2026</td>
-  <td>Kuala Lumpur</td>
-  <td>National Stadium Bukit Jalil</td>
-  <td>5:00 PM</td>
-  <td>7:00 PM</td>
-</tr>
-
-<tr>
-  <td>9 August 2026</td>
-  <td>Singapore</td>
-  <td>National Stadium</td>
-  <td>5:30 PM</td>
-  <td>7:30 PM</td>
+    <td>16 Aug 2026</td>
+    <td>Bangkok</td>
+    <td>Rajamangala Stadium</td>
+    <td>7:00 PM (THA)</td>
+    <td id="local3"></td>
+    <td>
+        <button onclick="addToCalendar(
+            'Bangkok Concert',
+            'Rajamangala Stadium',
+            '2026-08-16T19:00:00',
+            '2026-08-16T22:00:00'
+        )">
+        Add to Calendar
+        </button>
+    </td>
 </tr>
 
 </tbody>
+
 </table>
 
 </div>
 
 <footer>
-© 2026 Concert Information Portal
+© 2026 Concert Tour
 </footer>
 
 <script src="script.js"></script>
